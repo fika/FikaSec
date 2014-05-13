@@ -31,7 +31,7 @@ END=`echo "\033[0m"`
 # ~~~~~~~~~~ Environment Setup ~~~~~~~~~~ #
 #info
 ver=$(echo netcrash_1.0)
-#Author Love "Cosbysweater" DUfva
+#Author Love "Cosbysweater" Dufva
 
 #################################Start script and validation####################################
 #Init
