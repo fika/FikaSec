@@ -7,3 +7,9 @@ Our goal is to have a tool that we have written ourselves to do fun stuff, inste
 
 
 Please note that this is not to be used maliciously, the goal is to have something to demonstrate in a lab environment.
+
+How to use:
+
+Chmod -R +x ../FikaSec
+./INSTALL
+./FikaSec
