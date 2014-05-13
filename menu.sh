@@ -27,11 +27,14 @@
 echo -e "${RED_TEXT}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${END}"
 echo -e "${RED_TEXT}~~~~~~~~~~~~~~~~~~~~~~~~             MENU            ~~~~~~~~~~~~~~~~~~~~~~~~~${END}"
 echo -e "${RED_TEXT}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${END}"
-echo -e ""
-echo -e ""
+echo ""
+echo ""
 echo -e "${BLUE_TEXT}1) Netcrash - an application that targets the dhcp server and crashes it using hping3 and DHCPig."
+echo ""
 echo -e "${BLUE_TEXT}2) Arpion - an application that uses arp poisoning between a victim and the gateway."
+echo ""
 echo -e "${BLUE_TEXT}3) Portscan - an application that scans for open ports on the target system"
+echo ""
 echo -e "${BLUE_TEXT}9) Quit the program"
 
 # Look for options
