@@ -6,7 +6,7 @@
 
 # ~~~~~~~~~~  Environment Setup ~~~~~~~~~~ #
     NORMAL=`echo "\033[m"`
-    BLUE=`echo "\033[36m"` #Blue
+    BLUE_TEXT=`echo "\033[36m"` #Blue
     NUMBER=`echo "\033[33m"` #yellow
     FGRED=`echo "\033[41m"`
     RED_TEXT=`echo "\033[31m"` #Red
