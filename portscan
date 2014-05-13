@@ -1,4 +1,3 @@
-
 #!/bin/bash
 #created by norec for testing purposes
 
@@ -19,7 +18,7 @@ function portscan
 for ((counter=$firstport; counter<=$lastport; counter++))
         do
                 (echo >/dev/tcp/$host/$counter > /dev/null 2>&1 && echo "$counter open"
-done
+done)
 }
 
 portscan
