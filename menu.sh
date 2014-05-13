@@ -35,7 +35,8 @@ echo -e "${BLUE_TEXT}3) Portscan - an application that scans for open ports on t
 echo -e "${BLUE_TEXT}9) Quit the program"
 
 # Look for options
-
+echo -e ""
+echo -e "${RED_TEXT}SELECT:"
 read option
 
 
