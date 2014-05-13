@@ -1,0 +1,21 @@
+
+#!/bin/bash
+#created by norec for testing purposes
+
+host=$host
+port=$port
+
+echo "Which IP do you want to scam?"
+read host
+echo "Which port do you want to scan?"
+read port
+
+function portscan
+
+{
+        do
+                (echo >/dev/tcp/$host/$port > /dev/null 2>&1 && echo "$port open"
+done
+}
+
+portscan
