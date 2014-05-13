@@ -11,5 +11,7 @@ Please note that this is not to be used maliciously, the goal is to have somethi
 How to use:
 
 Chmod -R +x ../FikaSec
+
 ./INSTALL
+
 ./FikaSec
