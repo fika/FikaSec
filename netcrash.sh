@@ -44,8 +44,8 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 #Prerequisites
-mkdir -p /opt/netcrash
-cd /opt/netcrash
+#MOVED TO INSTALL FILE
+
 #Let's kill shit
 echo "What host do you want to kill?"
 read host
