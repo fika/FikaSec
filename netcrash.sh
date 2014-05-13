@@ -11,7 +11,7 @@
 #########################################################################################
 # 					known bugs 					#
 # 					None so far 					#
-# 			Please report bugs to info@lovedufva.se 			#
+# 			Please report bugs to love@dufva.guru				#
 #########################################################################################
 
 # ~~~~~~~~~~ Environment Setup ~~~~~~~~~~ #
@@ -46,8 +46,6 @@ fi
 #Prerequisites
 mkdir -p /opt/netcrash
 cd /opt/netcrash
-git clone https://github.com/kamorin/DHCPig.git
-sudo apt-get install hping3
 #Let's kill shit
 echo "What host do you want to kill?"
 read host
