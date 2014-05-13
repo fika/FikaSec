@@ -56,8 +56,10 @@ elif [ "$option" = "3" ]; then
 	#STARTING PORTSCAN
 	bash portscan.sh
 elif [ "$option" = "9" ]; then
+	echo "Exiting"
 	exit 0
 else
+echo "Please try again."
 exit 0
 fi
 
