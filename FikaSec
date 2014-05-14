@@ -42,6 +42,8 @@ echo -e "${BLUE_TEXT}4) Advanced Portscanner - Like portscan, but for several ho
 echo ""
 echo -e "${BLUE_TEXT}5) Dnskiller - an application that kills the resolution time of DNS servers.${END}"
 echo ""
+echo -e "${BLUE_TEXT}8) Kill all running hackz.${END}"
+echo ""
 echo -e "${BLUE_TEXT}9) Quit the program${END}"
 
 # Look for options
@@ -68,6 +70,10 @@ elif [ "$option" = "4" ]; then
 elif [ "$option" = "5" ]; then
 	#STARTING DNSKILLER
 	bash dnskiller.sh
+elif [ "$option" = "8" ]; then
+	#KILL ALL
+	pkill -9 hping3
+	pkill -9 dsniff
 elif [ "$option" = "9" ]; then
 	echo "Exiting"
 	exit 0
