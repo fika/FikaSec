@@ -74,7 +74,6 @@ case $response in
     *)
 	:
 ;;
-
 fi
 
 
