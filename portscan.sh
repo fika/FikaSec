@@ -30,19 +30,19 @@ BLACK=`echo "\033[109;30m"` #SPACE bg
 END=`echo "\033[0m"`
 # ~~~~~~~~~~ Environment Setup ~~~~~~~~~~ #
 #info
-ver=$(echo netcrash_1.0)
-#Author Love "Cosbysweater" Dufva
+ver=$(echo portscan_1.0)
+#Author Markus "Norec" Hertzén
 
 #################################Start script and validation####################################
 host=$host
 firstport=$firstport
 lastport=$lastport
 
-echo "Which IP do you want to scan?"
+echo -e "${RED_TEXT}Which IP do you want to scan?${END}"
 read host
-echo "Which port do you want to start with?"
+echo -e "${RED_TEXT}Which port do you want to start with?${END}"
 read firstport
-echo "Which port do you want to end with??"
+echo -e "${RED_TEXT}Which port do you want to end with?${END}"
 read lastport
 clear
 
@@ -51,7 +51,7 @@ function portscan
 {
 for ((counter=$firstport; counter<=$lastport; counter++))
         do
-                (echo >/dev/tcp/$host/$counter) > /dev/null 2>&1 && echo "$counter open"
+                (echo >/dev/tcp/$host/$counter) > /dev/null 2>&1 && echo -e "${RED_TEXT}$counter open${END}"
 done
 }
 
