@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Enter the first 3 bytes of your network (ex. 192.168.1)"
-read 3B
+read threeb
 echo ""
 echo "Enter the first host to scan (ex. 1)"
 read fhost
