@@ -24,6 +24,9 @@
 
 #ENTER MENU
 clear
+echo -e "${INFOS}YOU SHOULD RUN THIS AS ROOT.${END}"
+echo ""
+echo ""
 echo -e "${RED_TEXT}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${END}"
 echo -e "${RED_TEXT}~~~~~~~~~~~~~~~~~~~~~~~~             MENU            ~~~~~~~~~~~~~~~~~~~~~~~~~${END}"
 echo -e "${RED_TEXT}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${END}"
@@ -34,6 +37,8 @@ echo ""
 echo -e "${BLUE_TEXT}2) Arpion - an application that uses arp poisoning between a victim and the gateway.${END}"
 echo ""
 echo -e "${BLUE_TEXT}3) Portscan - an application that scans for open ports on the target system${END}"
+echo ""
+echo -e "${BLUE_TEXT}4) Advanced Portscanner - Like portscan, but for several hosts.${END}"
 echo ""
 echo -e "${BLUE_TEXT}9) Quit the program${END}"
 
@@ -54,6 +59,9 @@ elif [ "$option" = "2" ]; then
 
 elif [ "$option" = "3" ]; then
 	#STARTING PORTSCAN
+	bash portscan.sh
+elif [ "$option" = "4" ]; then
+	#STARTING ADV_PORTSCAN
 	bash portscan.sh
 elif [ "$option" = "9" ]; then
 	echo "Exiting"
