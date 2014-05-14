@@ -36,22 +36,22 @@ ver=$(echo portscan_adv_1.0)
 #################################Start script and validation####################################
 NOWT=$(date +"%T")
 
-echo -e "${RED_TEXT}Enter the${END}""${WARP} first 3 bytes${END}""${BLUE} of your${END}""${INFOS} network (ex. 192.168.1)${END}"
+echo -e "${WARP}Enter the first 3 bytes of your network (ex. 192.168.1)${END}"
 read threeb
 echo ""
-echo -e "${RED_TEXT}Enter the first host to scan (ex. 1)${END}"
+echo -e "${INFOS}Enter the first host to scan (ex. 1)${END}"
 read fhost
 echo ""
-echo -e "${RED_TEXT}Enter the last host to scan (ex. 254)${END}"
+echo -e "${INFOS}Enter the last host to scan (ex. 254)${END}"
 read lhost
 echo ""
-echo -e "${RED_TEXT}Enter the first port to scan (ex. 1)${END}"
+echo -e "${INFOS}Enter the first port to scan (ex. 1)${END}"
 read fport
 echo ""
-echo -e "${RED_TEXT}Enter the last port to scan (ex. 1024)${END}"
+echo -e "${INFOS}Enter the last port to scan (ex. 1024)${END}"
 read lport
 echo ""
-echo -e "${RED_TEXT}Enter the filename where you wish to save the results.${END}"
+echo -e "${INFOS}Enter the filename where you wish to save the results.${END}"
 read outfile
 echo ""
 echo -e "${BLUE}Starting scan. Please wait until it's finished, the results will be in $outfile${END}"
