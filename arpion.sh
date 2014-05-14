@@ -54,7 +54,7 @@ echo -n "What interface would you like to use?"
 	iface=eth0
 ;;
 esac
-echo -n "Example individual victim: 10.10.4.9, or for the entire subnet 10.10.4.255"
+echo  "Example individual victim: 10.10.4.9, or for the entire subnet 10.10.4.255"
 echo -n "Please enter target's IP: "
 read victimIP
 echo -n "Please enter Gateway's IP: "
@@ -74,7 +74,8 @@ case $response in
     *)
 	:
 ;;
-done
+esac
+fi
 
 
 
