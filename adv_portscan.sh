@@ -1,5 +1,7 @@
 #!/bin/bash
 
+NOWT=$(date +"%T")
+
 echo "Enter the first 3 bytes of your network (ex. 192.168.1)"
 read threeb
 echo ""
@@ -19,4 +21,4 @@ echo "Enter the filename where you wish to save the results."
 read outfile
 echo ""
 echo "Starting scan. Please wait until it's finished, the results will be in $outfile"
-for i in $(seq $fhost $lhost); do nc -v -n -z -w 1 $threeb.$i $fport-$lport >> scan.txt 2>&1; done && grep succeeded scan.txt > scanresult.txt && rm scan.txt
+for i in $(seq $fhost $lhost); do nc -v -n -z -w 1 $threeb.$i $fport-$lport >> $NOWT.txt 2>&1; done && grep succeeded $NOWT.txt > $outfile && rm $NOWT.txt
