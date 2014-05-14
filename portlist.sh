@@ -2,11 +2,11 @@
 #Echo known hosts.
 clear
 echo "
-Port    Description
-1       TCP Port Service Multiplexer (TCPMUX)
+Port      Description
+1         TCP Port Service Multiplexer (TCPMUX)
 5	      Remote Job Entry (RJE)
 7	      ECHO
-18      Message Send Protocol (MSP)
+18        Message Send Protocol (MSP)
 20	    FTP -- Data
 21	    FTP -- Control
 22	    SSH Remote Login Protocol
@@ -21,7 +21,7 @@ Port    Description
 69	    Trivial File Transfer Protocol (TFTP)
 70	    Gopher Services
 79	    Finger
-80    	HTTP
+80    	  HTTP
 103	    X.400 Standard
 108	    SNA Gateway Access Server
 109	    POP2
@@ -39,15 +39,14 @@ Port    Description
 190	    Gateway Access Control Protocol (GACP)
 194	    Internet Relay Chat (IRC)
 197	    Directory Location Service (DLS)
-389   	Lightweight Directory Access Protocol (LDAP)
-396   	Novell Netware over IP
+389   	  Lightweight Directory Access Protocol (LDAP)
+396   	  Novell Netware over IP
 443	    HTTPS
 444	    Simple Network Paging Protocol (SNPP)
 445	    Microsoft-DS
 458	    Apple QuickTime
 546	    DHCP Client
-547   	DHCP Server
+547     	DHCP Server
 563	    SNEWS
 569	    MSN
-1080	  Socks
-"
+1080	   Socks"
