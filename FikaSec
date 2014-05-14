@@ -62,7 +62,7 @@ elif [ "$option" = "3" ]; then
 	bash portscan.sh
 elif [ "$option" = "4" ]; then
 	#STARTING ADV_PORTSCAN
-	bash portscan.sh
+	bash adv_portscan.sh
 elif [ "$option" = "9" ]; then
 	echo "Exiting"
 	exit 0
