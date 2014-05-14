@@ -47,7 +47,7 @@ echo "What interface? (default: eth0)"
 read -r -p "Do you want to change interface? (Default: eth0) [y/N] " response
 case $response in
 [yY][eE][sS]|[yY])
-echo -n "What interface would you like to use?"
+echo -n "What interface would you like to use?:"
 	read iface
 ;;
     *)
