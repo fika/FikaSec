@@ -59,7 +59,7 @@ echo -n "Please enter target's IP: "
 read victimIP
 echo -n "Please enter Gateway's IP: "
 read gatewayIP
-echo -e "${WARNING}[TARGETS]{END}"
+echo -e "${WARNING}[TARGETS]${END}"
 echo -e "${RED_TEXT}Target:${END} $victimIP"
 echo -e "${RED_TEXT}Gateway:${END} $gatewayIP"
 echo -e "${SUCCESS}[*] Enabling IP Forwarding ${END}"
