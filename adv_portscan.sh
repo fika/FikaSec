@@ -56,3 +56,12 @@ read outfile
 echo ""
 echo -e "${BLUE}Starting scan. Please wait until it's finished, the results will be in $outfile${END}"
 for i in $(seq $fhost $lhost); do nc -v -n -z -w 1 $threeb.$i $fport-$lport >> $NOWT.txt 2>&1; done && grep succeeded $NOWT.txt > $outfile && rm $NOWT.txt && clear && cat $outfile
+read -r -p "Do you want to go back to the Main menu? [y/N] " response
+case $response in
+[yY][eE][sS]|[yY])
+        bash FikaSec
+;;
+    *)
+        :
+;;
+esac
