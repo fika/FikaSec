@@ -47,3 +47,12 @@ echo -e "${ENTER_LINE}Hostname/IP?${END}"
 read host
 echo -e "${BLUE}Starting dnskiller. You can run several by opening the menu in more terminal windows and starting it from there.${END}"
 hping3 -S -p 53 $host --flood 
+read -r -p "Do you want to go back to the Main menu? [y/N] " response
+case $response in
+[yY][eE][sS]|[yY])
+        bash FikaSec
+;;
+    *)
+        :
+;;
+esac
