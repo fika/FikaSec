@@ -54,8 +54,8 @@ read option
 
 
 if [ "$option" = "1" ]; then
-	#STARTING NETCRASH
-	bash netcrash.sh
+	#STARTING DHCPSTARV
+	bash dhcpstarv.sh
 
 elif [ "$option" = "2" ]; then
 	#STARTING ARPION
