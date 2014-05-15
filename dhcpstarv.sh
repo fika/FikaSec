@@ -54,3 +54,12 @@ case $response in
         ;;
 esac
 python DHCPig/pig.py $iface
+read -r -p "Do you want to go back to the Main menu? [y/N] " response
+case $response in
+[yY][eE][sS]|[yY])
+        bash FikaSec
+;;
+    *)
+        :
+;;
+esac
