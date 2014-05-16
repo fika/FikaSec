@@ -9,9 +9,12 @@ Our goal is to have a tool that we have written ourselves to do fun stuff, inste
 Please note that this is not to be used maliciously, the goal is to have something to demonstrate in a lab environment.
 
 How to use:
+git clone https://github.com/fika/FikaSec.git
 
-Chmod -R +x ../FikaSec
+Chmod -R +x ./FikaSec
 
-./INSTALL
+cd ./FikaSec
 
-./FikaSec
+sudo ./INSTALL
+
+sudo ./FikaSec
