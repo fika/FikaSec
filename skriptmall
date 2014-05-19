@@ -44,7 +44,7 @@ FILE="/tmp/out.$$"
 GREP="/bin/grep"
 #Only root should run this.
 if [[ $EUID -ne 0 ]]; then
-	cowsay "Run as root." 1>&2
+	cowsay -f sodomized-sheep "Run as root." 1>&2
 	exit 1
 fi
 
