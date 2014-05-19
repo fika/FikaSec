@@ -32,4 +32,4 @@ echo -e "${WARNING}"SSH tunnels are down"${END}
 echo -e "${RED_TEXT} "Something is wrong please check your settings"${END}
 bash sshtunnel.sh
 fi
-
+done
