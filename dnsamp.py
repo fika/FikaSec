@@ -6,6 +6,6 @@ from scapy.all import *
 import argparse
 import os
 import urllib2
-mypacket = IP(dst="10.10.4.8", src="10.10.4.9")/UDP(dport=53, sport=8000)/DNS(q$
+mypacket = IP(dst="10.10.4.8", src="10.10.4.9")/UDP(dport=53, sport=8000)/DNS(qd=DNSQR(qname="hackthissite.org", qtype="A"))
 while True:
         send(mypacket)
