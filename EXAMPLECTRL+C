@@ -1,0 +1,33 @@
+#!/bin/bash
+#Set variables
+line="GatewayPorts clientspecified"
+
+#Create function for cleanup
+cleanup()
+#exempel
+{
+sed -i "/${line}/ s/^/# /" /etc/ssh/sshd_config
+service ssh reload
+}
+
+
+#Run initialization
+sed -i "/${line}/ s/# *//" /etc/ssh/sshd_config
+service ssh reload
+
+
+#Setup exit trap
+ control_c()
+# run if user hits control-c
+{
+echo -en "\n*** Ouch! Exiting ***\n"
+cleanup
+exit $?
+}
+
+
+# trap keyboard interrupt (control-c)
+trap control_c SIGINT
+
+#Start script
+ssh -R etc etc etc etc
