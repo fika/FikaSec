@@ -15,7 +15,7 @@
 #########################################################################################
 
 # ~~~~~~~~~~ Environment Setup ~~~~~~~~~~ #
-./environment
+. ./environment
 # ~~~~~~~~~~ Environment Setup ~~~~~~~~~~ #
 #info
 #Author Johan "Saint" B�rjesson
