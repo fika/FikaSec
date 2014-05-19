@@ -15,7 +15,7 @@
 #########################################################################################
 
 # ~~~~~~~~~~ Environment Setup ~~~~~~~~~~ #
-./enviroment
+./environment
 # ~~~~~~~~~~ Environment Setup ~~~~~~~~~~ #
 #info
 #Author Johan "Saint" B�rjesson
@@ -26,10 +26,18 @@ while true
 do
 if ps aux | grep "ssh -N -f"
 then
-echo -e "${SUCCESS}"SSH tunnels are up"${END}
+echo -e "${SUCCESS}SSH tunnels are up${END}"
 else
-echo -e "${WARNING}"SSH tunnels are down"${END}
-echo -e "${RED_TEXT} "Something is wrong please check your settings"${END}
+echo -e "${WARNING}SSH tunnels are down${END}"
+echo -e "${RED_TEXT}Something is wrong please check your settings${END}"
+read -r -p "Do you want to go configure your settings again? [y/N] " response
+case $response in
+[yY][eE][sS]|[yY])
 bash sshtunnel.sh
+;;
+    *)
+:
+;;
+esac
 fi
-done
+
