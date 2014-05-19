@@ -50,5 +50,5 @@ fi
 
 
 # ~~~~~~~~~~  BEGINNING OF SCRIPT BELOW ~~~~~~~~~ #
-cowsay -f head-in 'Björn! -Rayneth 2014'
+cowsay -f head-in 'WHATUP'
 cowsay -f vader $volten
