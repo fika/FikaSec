@@ -1,4 +1,5 @@
 #!/bin/bash
+#Author Viktor "Volten" Voltaire
 echo -e "Enter the host you want to tunnel through"
 read hostip
 echo -e "Enter the port you want to forward with (example 2210)"
