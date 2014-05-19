@@ -6,7 +6,7 @@ volten="SMAKA HS!"
 cleanup()
 #exempel
 {
-#killall hping3
+cowsay 'hej'
 }
 
 # ~~~~~~~~~~  SETUP EXIT TRAP  ~~~~~~~~~ #
@@ -38,3 +38,4 @@ fi
 # ~~~~~~~~~~  BEGINNING OF SCRIPT BELOW ~~~~~~~~~ #
 cowsay -f head-in 'WHATUP'
 cowsay -f vader $volten
+echo -e "${BLUE_TEXT}TEST TEST TEST TEST${END}"
