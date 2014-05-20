@@ -24,7 +24,7 @@
 echo -n "Searching for tunnels"
 while true
 do
-if ps aux | grep "{2}" "ssh -N -f"
+if ps aux | grep "{2}" "ssh -N -f -R"
 then
 echo -e "${SUCCESS}SSH tunnels are up${END}"
 break
