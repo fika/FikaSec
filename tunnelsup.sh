@@ -37,6 +37,7 @@ case $response in
 bash sshtunnel.sh
 ;;
     *)
+exit
 :
 ;;
 esac
