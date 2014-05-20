@@ -24,13 +24,12 @@
 echo -n "Searching for tunnels"
 while true
 do
-if ps aux | grep "{2}" "ssh -N -f"
+if ps aux | grep "{2}" "ssh -N -f" &
 then
 echo -e "${SUCCESS}SSH tunnels are up${END}"
 break
 else
 echo -e "${WARNING}SSH tunnels are down${END}"
-break
 echo -e "${RED_TEXT}Something is wrong please check your settings${END}"
 read -r -p "Do you want to go configure your settings again? [y/N] " response
 case $response in
